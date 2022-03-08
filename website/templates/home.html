@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/styles.css" />
+</head>
+
+<body>
+    <div align="center">
+        <table class="table">
+            <tr class="table__header">
+                {% for header in headings%}
+                <th class="table__cell">{{ header }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in data %}
+            <tr class="table__row">
+                {%for cell in row %}
+                <td class="table__cell"> {{ cell }}</td>
+                {%endfor%}
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+<!--
+
+<h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes%}
+
+    <li class="list-group-item">{{ note.data}}
+        
+        <button type="button" class="close" onclick="deleteNote({{ note.id }})">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+    </li>
+    {%endfor%}
+</ul>
+<form method="POST">
+    <textarea name="note" class="form-control"></textarea>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Add Note</button>
+    </div>
+</form>-->
+{%endblock %}

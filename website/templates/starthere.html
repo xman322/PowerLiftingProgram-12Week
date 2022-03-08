@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+<form method="POST">
+    <h3 align="center">Welcome! Start here by entering your current one rep max for each lift indicated below!</h3>
+    <div class="form-group">
+        <label for="benchmax">Bench press one rep max.</label>
+        <input type="text" class="form-control" id="benchmax" name="benchmax" placeholder="Enter in either pounds or kilograms" />
+    </div>
+
+    <div class="form-group">
+        <label for="squatmax">Squat one rep max.</label>
+        <input type="text" class="form-control" id="squatmax" name="squatmax" placeholder="Enter in either pounds or kilograms" />
+    </div>
+
+    <div class="form-group">
+        <label for="deadmax">Deadlift one rep max.</label>
+        <input type="text" class="form-control" id="deadmax" name="deadmax" placeholder="Enter in either pounds or kilograms" />
+    </div>
+
+    <div class="form-group">
+        <label for="psquatmax">Paused squat one rep max.</label>
+        <input type="text" class="form-control" id="psquatmax" name="psquatmax" placeholder="Enter in either pounds or kilograms (if unknown enter a conservative estimate)" />
+    </div>
+
+    <div class="form-group">
+        <label for="pdeadmax">Paused deadlift one rep max.</label>
+        <input type="text" class="form-control" id="pdeadmax" name="pdeadmax" placeholder="Enter in either pounds or kilograms (if unknown enter a conservative estimate)" />
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary"> Submit</button>
+</form>
+
+{%endblock %}
