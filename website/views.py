@@ -28,6 +28,9 @@ def starthere():
         totals.append(float(request.form.get('psquatmax')))
         totals.append(float(request.form.get('pdeadmax')))
         """
+
+
+        
         totals.append(
             (
             float(request.form.get('benchmax')),
