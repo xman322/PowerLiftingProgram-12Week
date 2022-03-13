@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <h3 align="center">Week 1</h3>
     <div align="center">
         <table class="table">
             <tr class="table__header">
@@ -19,16 +20,45 @@
                 <th class="table__cell">{{ header }}</th>
                 {% endfor %}
             </tr>
-            {% for row in data %}
+           
             <tr class="table__row">
-                {%for cell in row %}
-                <td class="table__cell"> {{ cell }}</td>
-                {%endfor%}
+               
+                <td class="table__cell">Squat</td>
+                <td class="table__cell">4</td>
+                <td class="table__cell">4</td>
+                <td class="table__cell">{{(entries[1] * 0.75)|round}} </td>
+                <td class="table__cell">-</td>
+               
             </tr>
-            {%endfor%}
+
+            <tr class="table__row"> 
+                <td class="table__cell">Bench Press</td>
+                <td class="table__cell">5</td>
+                <td class="table__cell">4</td>
+                <td class="table__cell">{{(entries[0]*0.75)|round }}</td>
+                <td class="table__cell">-</td>
+            </tr>
+
+            <tr class="table__row">
+                <td class="table__cell">Leg Press</td>
+                <td class="table__cell">3</td>
+                <td class="table__cell">8-10</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">7-8</td>
+            </tr>
+
+            <tr class="table__row">
+                <td class="table__cell">DB Shoulder Press</td>
+                <td class="table__cell">3</td>
+                <td class="table__cell">10</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">7-8</td>
+            </tr>
+       
         </table>
     </div>
 
+    
 </body>
 
 </html>
